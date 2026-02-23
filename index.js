@@ -24,7 +24,7 @@ app.get('/get-ip', (req, res) => {
     res.send(`Your IP is: ${ip}`);
 })
 
-app.get("v2/get-ip", (req, res) => {
+app.get("/v2/get-ip", (req, res) => {
     let ip =
         req.headers["x-forwarded-for"]?.split(",")[0] ||
         req.socket.remoteAddress;
