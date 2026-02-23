@@ -9,10 +9,16 @@ app.get('/', (req, res) => {
     res.send(`<h1>Server Running Perfect.</h1>`)
 });
 
-app.get('/helth', (req, res) => {
+app.get('/health', (req, res) => {
     res.status(200).json({
         message: 'Server Health is good.',
     });
+})
+
+app.get('/get-ip', (req, res) => {
+    const ip = req.ip;
+
+    res.send(`Your IP is: ${ip}`);
 })
 
 
