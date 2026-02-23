@@ -26,5 +26,5 @@ jobs:
           cd ${{ secrets.EC2_APP_PATH }}
           git pull origin main
           npm install --production
-          pm2 restart server || pm2 start server.js --name server
+          pm2 restart server || pm2 start index.js --name server
           pm2 save
